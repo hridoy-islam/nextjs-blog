@@ -9,7 +9,9 @@ function Home({ posts }) {
         <title>Mother Fucker</title>
       </Head>
       <section>
-        <h1>This Website Owner is a theif. please don't work for him</h1>
+        <h1>
+          This Business Owner is a lier. <br />
+        </h1>
       </section>
     </Layout>
   );

@@ -1,20 +1,17 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import utilStyles from '../styles/utils.module.css'
-import styles from './layout.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import utilStyles from "../styles/utils.module.css";
+import styles from "./layout.module.css";
 
-
-const name = 'Your Name'
-export const siteTitle = 'Next.js Sample Website'
-
-
+const name = "Your Name";
+export const siteTitle = "Next.js Sample Website";
 
 export default function Layout({ children, home }) {
-    return (
-      <div className={styles.container}>
-        <Head>
+  return (
+    <div className={styles.container}>
+      <Head>
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
@@ -27,22 +24,11 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-        
-        </Head>
+      </Head>
 
-        <header className={styles.header}>
+      <header className={styles.header}>
         {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
+          <></>
         ) : (
           <>
             <Link href="/">
@@ -64,18 +50,17 @@ export default function Layout({ children, home }) {
             </h2>
           </>
         )}
-        </header>
-        
-        <main>{children}</main>
+      </header>
 
-        {!home && (
+      <main>{children}</main>
+
+      {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
       )}
-        
-      </div>
-    )
-  }
+    </div>
+  );
+}
